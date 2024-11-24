@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Video</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    /* Gaya Header */
+    header {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #f8f9fa;
+        border-bottom: 3px solid #fc0000;
+        position: relative;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        color: #fc0000;
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Gaya Galeri Video */
+    .gallery-video {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .video-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(145deg, #f9f9f9, #e0e0e0);
+        width: 250px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        border: 2px solid transparent;
+        padding: 5px;
+    }
+    
+    .video-card video {
+        width: 100%;
+        border-radius: 10px;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;    }
+    
+    .video-card p {
+        padding: 15px;
+        text-align: center;
+        background: #ffffff;
+        font-size: 0.9rem;
+        color: #333;
+        border-top: 1px solid #fc0000;
+    }
+    
+    /* Efek Hover */
+    .video-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(145deg, #fc0000, #ff4b4b);
+        border: 2px solid #fc0000;
+    }
+
+    .video-card:hover video {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+
+    .video-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        background: linear-gradient(145deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .video-card:hover::before {
+        opacity: 1;
+    }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Galeri Video</h1>
+    </header>
+    <section class="gallery-video">
+        <div class="video-card">
+            <video controls>
+                <source src="img/vidio1.mp4/bimtek.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+            <p>Bimtek Penginputan RUP SIRUP APBD TA 2024 di Pemerintah Daerah Kab. Barito Kuala</p>
+        </div>
+        <!-- Tambahkan lebih banyak video sesuai kebutuhan -->
+    </section>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" id="gallery-foto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kami</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Pastikan hanya satu tag ini di dalam head -->
+
+    <style>
+    header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 3px solid #fc0000;
+    position: relative;  
+    }
+
+    header h1 {
+    font-size: 2.5rem;
+    color: #fc0000;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .gallery-foto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    }
+
+    .photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    background: linear-gradient(145deg, #f9f9f9, #e0e0e0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent; 
+    padding: 5px;
+    }
+
+    .photo-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    }
+
+    .photo-card p {
+    padding: 15px;
+    text-align: center;
+    background: #ffffff;
+    font-size: 0.9rem;
+    color: #333;
+    border-top: 1px solid #fc0000;
+    } 
+
+    .photo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #fc0000, #ff4b4b); /* Warna gradien berubah saat hover */
+    border: 2px solid #fc0000;
+    }
+
+    .photo-card:hover img {
+    transform: scale(1.1); /* Zoom gambar saat hover */
+    opacity: 0.9;
+}
+
+.photo-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.photo-card:hover::before {
+    opacity: 1; /* Overlay gelap muncul saat hover */
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Galeri Foto</h1>
+    </header>
+    <section class="gallery-foto">
+        <div class="photo-card">
+            <img src="img/foto1.jpeg" alt="Foto 1">
+            <p>Mengikuti kegiatan rekortek Unit Kerja Pengadaan Barang dan Jasa se Kalimantan Selatan di Kab.Tanggerang</p>
+        </div>
+        <div class="photo-card">
+            <img src="img/foto2.jpeg" alt="Foto 2">
+            <p>Bimbingan teknis pekerjaan konstruksi melalui E-Katalog</p>
+        </div>
+        <div class="photo-card">
+            <img src="img/foto3.jpeg" alt="Foto 3">
+            <p>Mengikuti rapat koordinasi bersama ppk di Barito Kuala</p>
+        </div>
+        <div class="photo-card">
+            <img src="img/foto4.jpeg" alt="Foto 4">
+            <p>Koordinasi terkait E-Katalog Kontruksi ke Provinsi Jawa Timur</p>
+        </div>
+        <div class="photo-card">
+            <img src="img/foto5.jpeg" alt="Foto 5">
+            <p>Kegiatan bimbingan teknis penginputan RUP pada SIRUP untuk Admin RUP satuan kerja di Kab.Barito Kuala</p>
+        </div>
+        <div class="photo-card">
+            <img src="img/foto6.jpeg" alt="Foto 5">
+            <p>Penyerahan sertifikat untuk Mahasiswi PKL Politeknik Hasnur sebagai apresiasi atas kontribusi mereka</p>
+        </div>
+        <!-- Tambahkan lebih banyak foto sesuai kebutuhan -->
+    </section>
+</body>
+</html>
